@@ -1,0 +1,5 @@
+def namer(namer):
+    if namer == True:
+        return("x")
+    else:
+        return("o")

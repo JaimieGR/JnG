@@ -3,3 +3,29 @@ def namer(namer):
         return("x")
     else:
         return("o")
+
+
+
+#built by jaimie
+def SetBoard(pos):
+    board = []
+    X = pos.x
+    for x in range(0,3):
+        thisList=[]
+        for Y in range(0,3):
+            #newSpot = vec3(X,pos.y+Y,pos.z)
+            newSpot = (X,pos.y+Y,pos.z)
+            #print(str(newSpot))
+            thisList.append(newSpot)
+        X = X+1
+        board.append(thisList)
+    return(board)
+
+def BuildBoard(board):
+    print(str(board))
+    for x in range(0,3):
+        for Y in range(0,3):
+            print("in row " + str(x) + " and column " + str(Y) + " you can find " + str(board[x][Y]) + " this will now be built")
+            mc.setBlock(board[x][Y],block.BEDROCK)
+board = SetBoard(mc.player.getTilePos())
+BuildBoard(board)

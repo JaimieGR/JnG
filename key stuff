@@ -1,0 +1,5 @@
+import mcpi.minecraft as minecraft
+import mcpi.block as block
+import mcpi.vec3 as vec3
+mc = minecraft.Minecraft.create()
+print("hi")
